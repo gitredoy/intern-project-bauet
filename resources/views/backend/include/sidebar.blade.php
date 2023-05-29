@@ -14,7 +14,16 @@
                 <i class="bi bi-prescription"></i>
                 <span>Profile</span>
             </a>
-        </li><!-- End Dashboard Nav -->
+        </li>
+        <!-- Skill Menu -->
+        <li class="nav-item">
+            <a class="nav-link " href="{{route('admin.skill.view')}}">
+                <i class="bx bxl-airbnb"></i>
+                <span>Skill</span>
+            </a>
+        </li>
+
+        <!-- End Dashboard Nav -->
 
 
 

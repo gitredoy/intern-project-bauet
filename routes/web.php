@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\SkillController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +18,16 @@ use App\Http\Controllers\Admin\AdminController;
 
 
 Route::prefix('admin')->name('admin.')->group(function (){
+
     Route::controller(AdminController::class)->group(function (){
         Route::get('/dashboard','dashboardView')->name('dashboard.view');
         Route::get('/profile','profileView')->name('profile.view');
     });
+
+    Route::controller(SkillController::class)->group(function (){
+        Route::get('skill/view-skill','viewSkill')->name('skill.view');
+        Route::get('skill/add-skill','addSkill')->name('skill.add');
+        Route::post('skill/store-skill','storeSkill')->name('skill.store');
+    });
+
 });
